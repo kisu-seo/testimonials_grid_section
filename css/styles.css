@@ -1,0 +1,192 @@
+/***
+ * CSS Reset
+ * A modern CSS reset that removes default browser styles
+ * Version: 1.11.3 (2024-08-25)
+ * Source: https://github.com/elad2412/the-new-css-reset
+ */
+
+/* Base reset - removes all styles except display */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
+}
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Typography */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Interactive elements */
+a,
+button {
+    cursor: revert;
+}
+
+/* Lists */
+ol,
+ul,
+menu,
+summary {
+    list-style: none;
+}
+
+ol {
+    counter-reset: revert;
+}
+
+/* Media */
+img {
+    max-inline-size: 100%;
+    max-block-size: 100%;
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+}
+
+/* Form elements */
+input,
+textarea {
+    -webkit-user-select: auto;
+}
+
+textarea {
+    white-space: revert;
+}
+
+meter {
+    -webkit-appearance: revert;
+    appearance: revert;
+}
+
+/* Preformatted text */
+:where(pre) {
+    all: revert;
+    box-sizing: border-box;
+}
+
+/* Placeholders */
+::placeholder {
+    color: unset;
+}
+
+/* Hidden elements */
+:where([hidden]) {
+    display: none;
+}
+
+/* Content editable */
+:where([contenteditable]:not([contenteditable="false"])) {
+    -moz-user-modify: read-write;
+    -webkit-user-modify: read-write;
+    overflow-wrap: break-word;
+    -webkit-line-break: after-white-space;
+    -webkit-user-select: auto;
+}
+
+/* Draggable elements */
+:where([draggable="true"]) {
+    -webkit-user-drag: element;
+}
+
+/* Modal dialogs */
+:where(dialog:modal) {
+    all: revert;
+    box-sizing: border-box;
+}
+
+/* Details summary */
+::-webkit-details-marker {
+    display: none;
+}
+
+/* End of CSS Reset */
+
+/* Custom styles */
+
+html {
+    font-size: 13px;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    background-color: hsl(210, 46%, 95%);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main {
+    margin: 5rem 2rem;
+}
+
+.daniel,
+.jonathan,
+.jeanette,
+.patrick,
+.kira {
+    border-radius: 10px;
+    padding: 2rem 2.5rem;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.profile img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.verified {
+    opacity: 0.5;
+}
+
+.representive {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.main-text {
+    line-height: 1.25;
+    opacity: 0.7;
+}
+
+.daniel {
+    background-color: hsl(263, 55%, 52%);
+    background-blend-mode: normal;
+    background-image: url('../images/bg-pattern-quotation.svg');
+    background-position: top right 10%;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.daniel img {
+    border: 2px solid sl(0, 0%, 100%, 0.7);
+}
