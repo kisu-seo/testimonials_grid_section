@@ -114,23 +114,26 @@ meter {
 
 /* Custom styles */
 
+/* Base styles */
 html {
     font-size: 13px;
     font-family: "Barlow Semi Condensed", sans-serif;
     background-color: hsl(210, 46%, 95%);
+    color: hsl(217, 19%, 35%);
 }
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 }
 
 main {
     margin: 5rem 2rem;
 }
 
+/* Card components */
 .daniel,
 .jonathan,
 .jeanette,
@@ -138,8 +141,10 @@ main {
 .kira {
     border-radius: 10px;
     padding: 2rem 2.5rem;
+    margin-bottom: 2rem;
 }
 
+/* Profile section */
 .profile {
     display: flex;
     align-items: center;
@@ -158,6 +163,7 @@ main {
     flex-direction: column;
 }
 
+/* Typography */
 .name {
     font-size: 1.15rem;
     font-weight: 600;
@@ -178,15 +184,96 @@ main {
     opacity: 0.7;
 }
 
+/* Card specific styles */
 .daniel {
     background-color: hsl(263, 55%, 52%);
-    background-blend-mode: normal;
     background-image: url('../images/bg-pattern-quotation.svg');
     background-position: top right 10%;
     background-repeat: no-repeat;
+    background-blend-mode: normal;
     color: white;
 }
 
-.daniel img {
-    border: 2px solid sl(0, 0%, 100%, 0.7);
+.daniel img,
+.jonathan img,
+.jeanette img,
+.kira img {
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.patrick img {
+    border: 2px solid hsl(263, 55%, 52%);
+}
+
+.jonathan {
+    background-color: hsl(217, 19%, 35%);
+    color: white;
+}
+
+.jeanette {
+    background-color: hsl(0, 0%, 100%);
+}
+
+.patrick {
+    background-color: hsl(219, 29%, 14%);
+    color: white;
+}
+
+.kira {
+    background-color: hsl(0, 0%, 100%);
+    margin-bottom: 0;
+}
+
+footer {
+    color: hsl(0, 0%, 81%);
+}
+
+/* Responsive layouts */
+@media (min-width: 1024px) {
+    .container {
+        padding: 0 5rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    body {
+        height: 100vh;
+        padding: 0 10rem;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 2rem 2.5rem;
+    }
+
+    /* Grid layout positioning */
+    .daniel {
+        grid-area: 1 / 1 / 2 / 3;
+    }
+
+    .jonathan {
+        grid-area: 1 / 3 / 2 / 4;
+    }
+
+    .jeanette {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .kira {
+        grid-area: 1 / 4 / 3 / 5;
+    }
+
+    .patrick {
+        grid-area: 2 / 2 / 3 / 4;
+    }
+
+    .daniel,
+    .jonathan,
+    .jeanette,
+    .patrick,
+    .kira {
+        margin-bottom: 0;
+    }
 }
